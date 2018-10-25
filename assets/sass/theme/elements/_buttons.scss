@@ -1,0 +1,22 @@
+/* Button Styles */
+
+.btn {
+	color: #b1a585;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 4.2;
+	text-transform: uppercase;
+	letter-spacing: 1.3px;
+	text-decoration: none;
+	border-radius: 0;
+	background-color: transparent;
+	
+	&-1 {
+		border-top: 2px solid #474444;
+		padding-right: 38px;
+		background-image: url('../../images/icons/link-arrow.png');
+		background-repeat: no-repeat;
+		background-position: right center;
+		padding-top: 3px;
+	}
+}

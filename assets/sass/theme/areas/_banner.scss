@@ -1,0 +1,27 @@
+/* Banner Styles*/
+
+.banner {
+
+	&-slider {
+		&__item {
+			.container {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translateY(-50%) translateX(-50%);
+				width: 100%;
+			}
+		}
+	}
+	&-title {
+		color: $white;
+		font-size: 86px;
+		font-weight: 300;
+		line-height: .93;
+
+		@media screen and (max-width: 767px) {
+			font-size: 24px;
+			text-align: center;
+		}
+	}
+}

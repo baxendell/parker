@@ -1,0 +1,31 @@
+/**
+ * App - start here
+ */
+/* Theme Variables ------ */
+@import 'theme/variables';
+
+/* Vendors --------------- */
+@import 'vendor/owl/owl.carousel';
+
+/* Base ----------------- */
+@import 'base/mixins';
+@import "base/reset";
+@import 'base/helpers';
+@import 'base/global';
+
+/* Theme Elements ------- */
+@import 'theme/elements/typography';
+@import 'theme/elements/icons';
+@import 'theme/elements/backgrounds';
+@import 'theme/elements/buttons';
+@import 'theme/elements/form';
+@import 'theme/elements/testimonials';
+
+/* Theme Areas --------- */
+@import 'theme/areas/header';
+@import 'theme/areas/navbar';
+@import 'theme/areas/banner';
+@import 'theme/areas/footer';
+
+/* Theme Pages --------- */
+@import 'theme/pages/page';
