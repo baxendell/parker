@@ -1,37 +1,49 @@
 // // Custom js for Theme
 
 jQuery(document).ready(function($) {
-	var feed = new Instafeed({
-		get: 'user',
-        userId: '250223489',
-        accessToken: '250223489.461915d.94d36526543044a48f15c4a4fdb3eabe',
-        'limit': '4',
-        'resolution': 'low_resolution',
-        template: '<a href="{{link}}"><img src="{{image}}" /></a>'
+	
+	$(window).on('load', function() { 
+		$('body').css('opacity', 1);
+		AOS.refresh();
 	});
-	feed.run();
+	
+	//var feed = new Instafeed({
+	//	get: 'user',
+   //     userId: '1573873707',
+   //     accessToken: '250223489.461915d.94d36526543044a48f15c4a4fdb3eabe',
+   //     'limit': '4',
+    //    template: '<a href="{{link}}"><img src="{{image}}" /></a>'
+	//});
+	//feed.run();
+	
 
 	$('.banner-slider').owlCarousel({
 	    loop:true,
 	    nav:true,
 	    items: 1,
-	    center: true,
-	    autoWidth: true,
 	    dots: false,
 	    navContainer: '#customNav',
-	    navText: ["<img src='assets/images/icons/left-arrow-nav.png'>","<img src='assets/images/icons/right-arrow-nav.png'>"]
-	    //stagePadding: 250,
-	})
-
-	//Animations
+		smartSpeed:1200,
+	    navText: ["<img src='assets/images/icons/left-arrow-nav.png'>","<img src='assets/images/icons/right-arrow-nav.png'>"],
+		responsive : {
+			992 : {
+				stagePadding: 125
+			}
+		}
+	});
 	
- 	$('.wpoint').css('opacity', 0);
-	  $('.wpoint').waypoint(function() {
-	      $('.fil').addClass('fadeInLeft');
-	      $('.fir').addClass('fadeInRight');
-	      $('.sir').addClass('slideInRight');
-	      $('.fip').addClass('fadeInUp');
-	      $('.wpoint').css('opacity', 1);
-	  }, { offset: '100%' });
+	$('.owl-carousel').on('change.owl.carousel', function(e) {
+	  if (e.namespace && e.property.name === 'position' 
+		&& e.relatedTarget.relative(e.property.value) === e.relatedTarget.items().length - 1 && e.property.value > 1 ) {
+		// put your stuff here ...
+		$('.owl-carousel .owl-item.cloned .i3').addClass('light');
+	  }
+	  else if (e.namespace && e.property.name === 'position' 
+		&& e.relatedTarget.relative(e.property.value) === 0) {
+		// put your stuff here ...
+		$('.owl-carousel .owl-item.cloned .i3').removeClass('light');
+	  }
+	});
 });
+
 

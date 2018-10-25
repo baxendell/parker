@@ -19,9 +19,42 @@
 		font-weight: 300;
 		line-height: .93;
 
+		@media screen and (max-width: 1199px) {
+			font-size: 64px;
+		}
+		@media screen and (max-width: 991px) {
+			font-size: 44px;
+		}
 		@media screen and (max-width: 767px) {
 			font-size: 24px;
 			text-align: center;
 		}
+	}
+	@media screen and (min-width: 992px) {
+		.owl-carousel .owl-stage {
+			right:-125px;
+		}
+	}
+	
+	.owl-carousel .owl-item .banner-slider__item {
+		opacity: .2;
+		transition:all 1s;
+	}
+	.owl-carousel .owl-item.active .banner-slider__item {
+		opacity: 1;
+	}
+	.owl-carousel .owl-item .banner-slider__item.light {
+		opacity: 1;
+	}
+	
+	.owl-carousel .owl-item .banner-title {
+		opacity:0;
+		transition:all 1s;
+	}
+	.owl-carousel .owl-item.active .banner-title{
+		opacity:1;
+	}
+	.owl-carousel .owl-item .light .banner-title {
+		opacity:1;
 	}
 }

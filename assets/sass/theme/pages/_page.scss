@@ -2,7 +2,14 @@
 
 .main {
 	padding: 175px 0;
-
+	@media screen and (max-width: 991px) {
+		padding: 75px 0;
+	}
+	h1 br {
+		@media screen and (max-width: 991px) {
+			display:none;
+		}
+	}
 	.col-md-5 {
 		&:last-of-type {
 			.btn {
@@ -10,12 +17,28 @@
 			}
 		}
 	}
+	@media screen and (max-width: 767px) {
+		h1 {
+			font-size: 28px;
+			line-height: 1.4;
+		}
+		h2 {
+			font-size: 22px;
+			line-height: 1.4;
+		}
+		p {
+			line-height: 1.7;
+			font-size: 16px;
+		}
+	}
 }
 
 .insta {
 	overflow: hidden;
 	padding-bottom: 128px;
-
+	@media screen and (max-width: 767px) {
+		padding-bottom: 75px;
+	}
 	#instafeed {
 		display: flex;
 		justify-content: space-between;
